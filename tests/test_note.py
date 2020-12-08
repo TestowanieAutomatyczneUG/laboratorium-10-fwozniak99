@@ -19,14 +19,14 @@ class TestNote(unittest.TestCase):
     def test_note_greater_than_6_exception(self):
         self.assertRaises(ValueError, Note, 'filip', 6.5)
 
-    def test_name_not_empty(self):
+    def test_name_not_empty_exception(self):
         self.assertRaises(ValueError, Note, '', 4.5)
 
-    def test_name_not_str(self):
+    def test_name_not_str_exception(self):
         self.assertRaises(TypeError, Note, 123, 3.5)
 
-    def test_name_not_none(self):
+    def test_name_not_none_exception(self):
         self.assertRaises(TypeError, Note, None, 2.5)
 
-    def test_note_not_float(self):
+    def test_note_not_float_exception(self):
         self.assertRaises(TypeError, Note, 'marcin', 4)
